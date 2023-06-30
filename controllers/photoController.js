@@ -52,7 +52,7 @@ const photoControllers = {
 	},
 	allPhotos: async (req, res) => {
 		const photos = await Photo.find();
-		res.status(200).json({ photos });
+		res.status(200).json(photos);
 	},
 	PhotosById: async (req, res) => {
 		const photos = await Photo.findById(req.params.id);

@@ -33,8 +33,8 @@ const categoryControllers = {
 		}
 	},
 	allCategories: async (req, res) => {
-		const categories = await Category.find({});
-		res.status(200).json({ categories });
+		const categories = await Category.find().sort("name");
+		res.status(200).json(categories);
 	},
 	categoryById: async (req, res) => {
 		const category = await Category.findById(req.params.id);

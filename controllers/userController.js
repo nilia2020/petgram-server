@@ -39,7 +39,7 @@ const userControllers = {
 	},
 	allUsers: async (req, res) => {
 		const users = await User.find();
-		res.status(200).json({ users });
+		res.status(200).json(users);
 	},
 	userById: async (req, res) => {
 		const user = await User.findById(req.params.id);
