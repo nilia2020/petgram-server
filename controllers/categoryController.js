@@ -33,7 +33,7 @@ const categoryControllers = {
 		}
 	},
 	allCategories: async (req, res) => {
-		const categories = await Category.find();
+		const categories = await Category.find({});
 		res.status(200).json({ categories });
 	},
 	categoryById: async (req, res) => {
