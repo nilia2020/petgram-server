@@ -56,7 +56,7 @@ const photoControllers = {
 	},
 	PhotosById: async (req, res) => {
 		const photos = await Photo.findById(req.params.id);
-		res.status(200).json({ photos });
+		res.status(200).json(photos);
 	},
 	deletePhoto: async (req, res) => {
 		try {

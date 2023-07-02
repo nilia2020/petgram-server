@@ -38,7 +38,7 @@ const categoryControllers = {
 	},
 	categoryById: async (req, res) => {
 		const category = await Category.findById(req.params.id);
-		res.status(200).json({ category });
+		res.status(200).json(category);
 	},
 	deleteCategory: async (req, res) => {
 		try {
