@@ -17,7 +17,7 @@ router.get("/seeall", controller.allPhotos);
 router.get("/see/:id", validatePhotoId, controller.PhotosById);
 
 /* Filtrar por categoria */
-router.get("/seecategory/:categoryId", validatePhotoId, controller.PhotosByCategoryId);
+router.get("/seecategory/:categoryId", controller.PhotosByCategoryId);
 
 /* Editar foto */
 router.put(
